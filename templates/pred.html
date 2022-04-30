@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarPrediction</title>
+</head>
+
+<body>
+    <form action="{{ url_for('predict')}}" method="POST">
+        <div class="mb-3">
+            <label for="year" class="form-label"> Year of Manufacture </label>
+            <input type="number" name="yeaar" class="form-control" id="yearman">
+        </div>
+        <div class="mb-3">
+            <label for="kmd" class="form-label">KM Driven</label>
+            <input type="number" name="Driven" class="form-control" id="SP">
+        </div>
+        <div class="mb-3 form-check">
+            <input type="radio" checked class="form-check-input" name="fuel" value="Petrol" id="fuel">
+            <label class="form-check-label" for="exampleCheck1">Petrol</label>
+            <input type="radio" class="form-check-input" name="fuel" value="Diesel" id="fuel1">
+            <label class="form-check-label" for="exampleCheck1">Diesel </label>
+            <input type="radio" class="form-check-input" name="fuel" value="CNG" id="fuel2">
+            <label class="form-check-label" for="exampleCheck1">CNG</label>
+        </div>
+        <div class="mb-3">
+            <label for="cars">Choose a Seller:</label>
+
+            <select name="cars" id="seller">
+                <option value="Individual">Individual</option>
+                <option value="Dealer">Dealer</option>
+
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="cars">Select Transmission :</label>
+
+            <select name="trans" id="transmission">
+                <option value="Manual">Manual</option>
+                <option value="Automatic">Automatic</option>
+
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="cars">Select Transmission :</label>
+
+            <select name="ownership" id="own">
+                <option value="FO">First Owner</option>
+                <option value="SO">Second Owner</option>
+                <option value="TO">Third Owner</option>
+                <option value="FOU">Fourth Owner</option>
+
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    {{ to }}
+</body>
+
+</html>
